@@ -6,10 +6,7 @@ load_dotenv()
 
 laliga_url_default = os.getenv('LALIGA_DEFAULT_STRUCTURE')
 
-
 from functions.check_structrure.check_structure import *
-
-
 
 class ObjecMain:
 

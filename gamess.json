@@ -1,0 +1,478 @@
+{
+    "id": "0f247dbb-1f77-4a83-a4bf-53fe03fd172b",
+    "id_game": "AlavesValladolid La Liga2024/25 ",
+    "date": "falta a data",
+    "game": "Alaves vs Valladolid",
+    "home": "Alaves",
+    "away": "Valladolid",
+    "season": "2024/25 ",
+    "league": "La Liga",
+    "hour_game": "22:00",
+    "simbol": {
+        "home": "hom",
+        "away": "awy"
+    },
+    "last_game": {
+        "home": [
+            {
+                "data": "6 Oct",
+                "game": "ALV - FC Barcelona",
+                "result": "0:3",
+                "moments": [
+                    {
+                        "time": "7",
+                        "goal": "0-1",
+                        "who_scored": "Robert Lewandowski"
+                    },
+                    {
+                        "time": "22",
+                        "goal": "0-2",
+                        "who_scored": "Robert Lewandowski"
+                    },
+                    {
+                        "time": "32",
+                        "goal": "0-3",
+                        "who_scored": "Robert Lewandowski"
+                    }
+                ]
+            },
+            {
+                "data": "28 Sep",
+                "game": "Getafe - ALV",
+                "result": "2:0",
+                "moments": [
+                    {
+                        "time": "42",
+                        "goal": "1-0",
+                        "who_scored": "Mauro Arambarri"
+                    },
+                    {
+                        "time": "58",
+                        "goal": "2-0",
+                        "who_scored": "Luis Milla"
+                    }
+                ]
+            },
+            {
+                "data": "24 Sep",
+                "game": "Real Madrid - ALV",
+                "result": "3:2",
+                "moments": [
+                    {
+                        "time": "1",
+                        "goal": "1-0",
+                        "who_scored": "Lucas V\u00e1zquez"
+                    },
+                    {
+                        "time": "40",
+                        "goal": "2-0",
+                        "who_scored": "Kylian Mbapp\u00e9"
+                    },
+                    {
+                        "time": "48",
+                        "goal": "3-0",
+                        "who_scored": "Rodrygo"
+                    },
+                    {
+                        "time": "85",
+                        "goal": "3-1",
+                        "who_scored": "Carlos Benav\u00eddez"
+                    },
+                    {
+                        "time": "86",
+                        "goal": "3-2",
+                        "who_scored": "Kike Garc\u00eda"
+                    }
+                ]
+            },
+            {
+                "data": "20 Sep",
+                "game": "ALV - Sevilla FC",
+                "result": "2:1",
+                "moments": [
+                    {
+                        "time": "17",
+                        "goal": "1-0",
+                        "who_scored": "Carlos Vicente"
+                    },
+                    {
+                        "time": "60",
+                        "goal": "2-0",
+                        "who_scored": "Carlos Mart\u00edn"
+                    },
+                    {
+                        "time": "83",
+                        "goal": "2-1",
+                        "who_scored": "Dodi Lukebakio"
+                    }
+                ]
+            },
+            {
+                "data": "14 Sep",
+                "game": "Espanyol - ALV",
+                "result": "3:2",
+                "moments": [
+                    {
+                        "time": "21",
+                        "goal": "1-0",
+                        "who_scored": "Javi Puado"
+                    },
+                    {
+                        "time": "35",
+                        "goal": "1-1",
+                        "who_scored": "T. Conechny"
+                    },
+                    {
+                        "time": "56",
+                        "goal": "2-1",
+                        "who_scored": "Javi Puado"
+                    },
+                    {
+                        "time": "63",
+                        "goal": "3-1",
+                        "who_scored": "Javi Puado"
+                    },
+                    {
+                        "time": "68",
+                        "goal": "3-2",
+                        "who_scored": "Nahuel Tenaglia"
+                    }
+                ]
+            },
+            {
+                "data": "1 Sep",
+                "game": "ALV - Las Palmas",
+                "result": "2:0",
+                "moments": [
+                    {
+                        "time": "7",
+                        "goal": "1-0",
+                        "who_scored": "Carlos Vicente"
+                    },
+                    {
+                        "time": "78",
+                        "goal": "2-0",
+                        "who_scored": "Toni Mart\u00ednez"
+                    }
+                ]
+            },
+            {
+                "data": "28 Aug",
+                "game": "Real Sociedad - ALV",
+                "result": "1:2",
+                "moments": [
+                    {
+                        "time": "32",
+                        "goal": "1-0",
+                        "who_scored": "Brais M\u00e9ndez"
+                    },
+                    {
+                        "time": "45",
+                        "goal": "1-1",
+                        "who_scored": "Asier Villalibre"
+                    },
+                    {
+                        "time": "77",
+                        "goal": "1-2",
+                        "who_scored": "Toni Mart\u00ednez"
+                    }
+                ]
+            },
+            {
+                "data": "25 Aug",
+                "game": "ALV - Real Betis",
+                "result": "0:0",
+                "moments": []
+            }
+        ],
+        "away": [
+            {
+                "data": "5 Oct",
+                "game": "RVA - Rayo Vallecano",
+                "result": "1:2",
+                "moments": [
+                    {
+                        "time": "51",
+                        "goal": "1-0",
+                        "who_scored": "Selim Amallah"
+                    },
+                    {
+                        "time": "57",
+                        "goal": "1-1",
+                        "who_scored": "Jorge de Frutos"
+                    },
+                    {
+                        "time": "80",
+                        "goal": "1-2",
+                        "who_scored": "Jorge de Frutos"
+                    }
+                ]
+            },
+            {
+                "data": "27 Sep",
+                "game": "RVA - Mallorca",
+                "result": "1:2",
+                "moments": [
+                    {
+                        "time": "59",
+                        "goal": "0-1",
+                        "who_scored": "Cyle Larin"
+                    },
+                    {
+                        "time": "83",
+                        "goal": "0-2",
+                        "who_scored": "Valery Fern\u00e1ndez"
+                    },
+                    {
+                        "time": "90",
+                        "goal": "1-2",
+                        "who_scored": "Iv\u00e1n S\u00e1nchez"
+                    }
+                ]
+            },
+            {
+                "data": "24 Sep",
+                "game": "Sevilla FC - RVA",
+                "result": "2:1",
+                "moments": [
+                    {
+                        "time": "o.g.) (45",
+                        "goal": "1-0",
+                        "who_scored": "David Torres"
+                    },
+                    {
+                        "time": "56",
+                        "goal": "1-1",
+                        "who_scored": "Kike P\u00e9rez"
+                    },
+                    {
+                        "time": "85",
+                        "goal": "2-1",
+                        "who_scored": "Chidera Ejuke"
+                    }
+                ]
+            },
+            {
+                "data": "21 Sep",
+                "game": "RVA - Real Sociedad",
+                "result": "0:0",
+                "moments": []
+            },
+            {
+                "data": "15 Sep",
+                "game": "Celta Vigo - RVA",
+                "result": "3:1",
+                "moments": [
+                    {
+                        "time": "22",
+                        "goal": "1-0",
+                        "who_scored": "Hugo \u00c1lvarez"
+                    },
+                    {
+                        "time": "35",
+                        "goal": "2-0",
+                        "who_scored": "Borja Iglesias"
+                    },
+                    {
+                        "time": "50",
+                        "goal": "2-1",
+                        "who_scored": "Ra\u00fal Moro"
+                    },
+                    {
+                        "time": "90",
+                        "goal": "3-1",
+                        "who_scored": "Anastasios Douvikas"
+                    }
+                ]
+            },
+            {
+                "data": "31 Aug",
+                "game": "FC Barcelona - RVA",
+                "result": "7:0",
+                "moments": [
+                    {
+                        "time": "20",
+                        "goal": "1-0",
+                        "who_scored": "Raphinha"
+                    },
+                    {
+                        "time": "24",
+                        "goal": "2-0",
+                        "who_scored": "Robert Lewandowski"
+                    },
+                    {
+                        "time": "45",
+                        "goal": "3-0",
+                        "who_scored": "Jules Kound\u00e9"
+                    },
+                    {
+                        "time": "64",
+                        "goal": "4-0",
+                        "who_scored": "Raphinha"
+                    },
+                    {
+                        "time": "72",
+                        "goal": "5-0",
+                        "who_scored": "Raphinha"
+                    },
+                    {
+                        "time": "82",
+                        "goal": "6-0",
+                        "who_scored": "Dani Olmo"
+                    },
+                    {
+                        "time": "85",
+                        "goal": "7-0",
+                        "who_scored": "Ferran Torres"
+                    }
+                ]
+            },
+            {
+                "data": "28 Aug",
+                "game": "RVA - Leganes",
+                "result": "0:0",
+                "moments": []
+            },
+            {
+                "data": "25 Aug",
+                "game": "Real Madrid - RVA",
+                "result": "3:0",
+                "moments": [
+                    {
+                        "time": "50",
+                        "goal": "1-0",
+                        "who_scored": "Federico Valverde"
+                    },
+                    {
+                        "time": "88",
+                        "goal": "2-0",
+                        "who_scored": "Brahim D\u00edaz"
+                    },
+                    {
+                        "time": "90",
+                        "goal": "3-0",
+                        "who_scored": "Endrick"
+                    }
+                ]
+            }
+        ]
+    },
+    "ppg": {
+        "home": 1.75,
+        "home_total": 1.11,
+        "away": 0.0,
+        "away_total": 0.56,
+        "points": {
+            "home": {
+                "gp": "4",
+                "w": "2",
+                "d": "1",
+                "l": "1",
+                "total": {
+                    "gp": "9",
+                    "w": "3",
+                    "d": "1",
+                    "l": "5"
+                }
+            },
+            "away": {
+                "gp": "4",
+                "w": "0",
+                "d": "0",
+                "l": "4",
+                "total": {
+                    "gp": "9",
+                    "w": "1",
+                    "d": "2",
+                    "l": "6"
+                }
+            }
+        }
+    },
+    "performance": {
+        "home": {
+            "poins": "70",
+            "goal_scored": "36",
+            "goal_conceded": "27"
+        },
+        "away": {
+            "points": "0",
+            "goal_scored": "40",
+            "goal_coneceded": "79"
+        }
+    },
+    "team_score_stats": {
+        "home": {
+            "score_average": {
+                "home": "2.38",
+                "average_league": "1.47"
+            },
+            "score_rate": {
+                "home_scoring": "75%",
+                "average_league": "79%"
+            }
+        },
+        "away": {
+            "score_average": {
+                "away": "0.75",
+                "average_league": "1.02"
+            },
+            "score_rate": {
+                "away_scoring": "50%",
+                "average_league": "67%"
+            }
+        },
+        "bts": {
+            "bts": "38%",
+            "average_league": "57%"
+        },
+        "total_over_1_5": {
+            "total_over_1_5": "88%",
+            "average_league": "74%"
+        },
+        "total_over_2_5": {
+            "total_over_2_5": "75%",
+            "average_league": "48%"
+        },
+        "total_over_3_5": {
+            "total_over_3_5": "25%",
+            "average_league": "20%"
+        },
+        "total_average": {
+            "total_scoring": "3.13",
+            "average_league": "2.49"
+        }
+    },
+    "total_match_goal": {
+        "home": {
+            "name": "Alaves",
+            "gp": "8",
+            "avg": "2.88",
+            "1.5+": "88%",
+            "2.5+": "88%",
+            "3.5+": "62%",
+            "4.5+": "25%",
+            "5.5+": "25%",
+            "bts": "0%",
+            "cs": "50%",
+            "fts": "25%",
+            "wtn": "38%",
+            "ltn": "12%"
+        },
+        "away": {
+            "name": "Valladolid",
+            "gp": "8",
+            "avg": "2.88",
+            "1.5+": "75%",
+            "2.5+": "75%",
+            "3.5+": "75%",
+            "4.5+": "25%",
+            "5.5+": "12%",
+            "bts": "12%",
+            "cs": "50%",
+            "fts": "25%",
+            "wtn": "50%",
+            "ltn": "0%"
+        }
+    }
+}

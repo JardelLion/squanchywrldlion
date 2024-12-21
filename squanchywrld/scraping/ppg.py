@@ -1,12 +1,26 @@
-from ObjectMain import ObjecMain
+from object_main import ObjecMain
 
 
 class PPG(ObjecMain):
-    _selector = '#content > div:nth-child(9) > div:nth-child(7) > div:nth-child(1) > div:nth-child(2) > table:nth-child(12)'
-
+    _selectors = ['#content > div:nth-child(9) > div:nth-child(7) > div:nth-child(1) > div:nth-child(2) > table:nth-child(12)',
+    '#content > div:nth-child(11) > div:nth-child(7) > div:nth-child(1) > div:nth-child(2) > table:nth-child(12)'
+    
+    ]
 
     def __init__(self, url):
-        super().__init__(url=url, selector=self._selector)
+        self._soup = None
+        
+        for selector in self._selectors:
+            
+            super().__init__(url, selector)
+            if self._new_part:
+                self._soup = self._new_part[0]
+                break
+
+        if self._soup is None:
+            raise ValueError("Nenhum dado encontrado com os seletores fornecidos.")
+
+    
         
         
 
@@ -75,16 +89,46 @@ class PPG(ObjecMain):
 
 class PPGPoints(ObjecMain):
 
-    _selector = '#content > div:nth-child(9) > div:nth-child(7) > div:nth-child(1) > div:nth-child(2) > table:nth-child(12) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(3)'
-    
+    _selectors = [
+       # '#content > div:nth-child(9) > div:nth-child(7) > div:nth-child(1) > div:nth-child(2) > table:nth-child(12) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(3)',
+        '#content > div:nth-child(11) > div:nth-child(7) > div:nth-child(1) > div:nth-child(2) > table:nth-child(12) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(3)'
+        
+    ]
     def __init__(self, url):
-        super().__init__(url, self._selector)
-        self._table_row_first = self._new_part[0].find_all("tr")[1]
-        self._table_row_second = self._new_part[0].find_all('tr')[2]
+        self._soup = None
+        self._table_row_first = None
+        self._table_row_second = None
 
+        for selector in self._selectors:
+            try:
+                # Chama o método da classe pai para realizar a extração do conteúdo
+                super().__init__(url, selector)
+                
+                # Se o conteúdo foi encontrado, tenta acessar as linhas da tabela
+                if self._new_part:
+                    rows = self._new_part[0].find_all("tr")
+                    
+                    # Verifica se o número esperado de linhas está presente
+                    if len(rows) > 2:
+                        self._table_row_first = rows[1]  # Linha 1
+                        self._table_row_second = rows[2]  # Linha 2
+                    else:
+                        raise ValueError("Número insuficiente de linhas na tabela.")
+                    
+                    break  # Se o conteúdo foi encontrado, sai do laço de seletores
+                else:
+                    raise ValueError("Nenhum dado encontrado com o seletor fornecido.")
+            except Exception as e:
+                # Trata erros na execução da extração ou na manipulação da estrutura
+                print(f"Erro ao processar seletor {selector}: {e}")
+                continue
+
+        # Se nenhum dado válido for encontrado, lança uma exceção
+        if self._table_row_first is None or self._table_row_second is None:
+            raise ValueError("Nenhum dado encontrado com os seletores fornecidos.")
 
         
-    def get_table_ppg_points(self, table_row_soup):
+    def _get_table_ppg_points(self, table_row_soup):
         """
             table_row_soup is the new part[0] table based on 
             - self._table_row_first
@@ -113,52 +157,52 @@ class PPGPoints(ObjecMain):
 
     @property
     def get_home_point_gp(self):
-        values = self.get_table_ppg_points(self._table_row_first)
+        values = self._get_table_ppg_points(self._table_row_first)
        
 
         return values[0]['home_gp']
     
     @property
     def get_home_point_win(self):
-        values = self.get_table_ppg_points(self._table_row_first)
+        values = self._get_table_ppg_points(self._table_row_first)
 
         return values[0]['home_win']
     
     @property
     def get_home_point_draw(self):
-        values = self.get_table_ppg_points(self._table_row_first)
+        values = self._get_table_ppg_points(self._table_row_first)
 
         return values[0]['home_draw']
     
     @property
     def get_home_point_lose(self):
-        values = self.get_table_ppg_points(self._table_row_first)
+        values = self._get_table_ppg_points(self._table_row_first)
 
         return values[0]['home_lose']
     
 
     @property
     def get_away_point_gp(self):
-        values = self.get_table_ppg_points(self._table_row_first)
+        values = self._get_table_ppg_points(self._table_row_first)
        
 
         return values[-1]['away_gp']
     
     @property
     def get_away_point_win(self):
-        values = self.get_table_ppg_points(self._table_row_first)
+        values = self._get_table_ppg_points(self._table_row_first)
 
         return values[-1]['away_win']
     
     @property
     def get_away_point_draw(self):
-        values = self.get_table_ppg_points(self._table_row_first)
+        values = self._get_table_ppg_points(self._table_row_first)
 
         return values[-1]['away_draw']
     
     @property
     def get_away_point_lose(self):
-        values = self.get_table_ppg_points(self._table_row_first)
+        values = self._get_table_ppg_points(self._table_row_first)
 
         return values[-1]['away_lose']
     
@@ -168,59 +212,63 @@ class PPGPoints(ObjecMain):
 
     @property
     def get_home_point_gp_total(self):
-        values = self.get_table_ppg_points(self._table_row_second)
+        values = self._get_table_ppg_points(self._table_row_second)
        
 
         return values[0]['home_gp']
     
     @property
     def get_home_point_win_total(self):
-        values = self.get_table_ppg_points(self._table_row_second)
+        values = self._get_table_ppg_points(self._table_row_second)
 
         return values[0]['home_win']
     
     @property
     def get_home_point_draw_total(self):
-        values = self.get_table_ppg_points(self._table_row_second)
+        values = self._get_table_ppg_points(self._table_row_second)
 
         return values[0]['home_draw']
     
     @property
     def get_home_point_lose_total(self):
-        values = self.get_table_ppg_points(self._table_row_second)
+        values = self._get_table_ppg_points(self._table_row_second)
 
         return values[0]['home_lose']
     
 
     @property
     def get_away_point_gp_total(self):
-        values = self.get_table_ppg_points(self._table_row_second)
+        values = self._get_table_ppg_points(self._table_row_second)
        
 
         return values[-1]['away_gp']
     
     @property
     def get_away_point_win_total(self):
-        values = self.get_table_ppg_points(self._table_row_second)
+        values = self._get_table_ppg_points(self._table_row_second)
 
         return values[-1]['away_win']
     
     @property
     def get_away_point_draw_total(self):
-        values = self.get_table_ppg_points(self._table_row_second)
+        values = self._get_table_ppg_points(self._table_row_second)
 
         return values[-1]['away_draw']
     
     @property
     def get_away_point_lose_total(self):
-        values = self.get_table_ppg_points(self._table_row_second)
+        values = self._get_table_ppg_points(self._table_row_second)
 
         return values[-1]['away_lose']
-
-
-        
-
     
-        
 
+
+
+
+
+
+if __name__ == "__main__":
+    url = 'file:///home/jardel-lion-studio/Documents/games/octuber/18/Alaves%20vs%20Valladolid%20H2H%20stats%20preview%20and%20analysis,%202024-2025.html'
+    
+    last_resutl = PPG(url)
     

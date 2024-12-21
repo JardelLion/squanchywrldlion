@@ -1,14 +1,31 @@
 """
 the purpose of this classes is to pic the first team and the second team
 """
-from classes.ppg import ObjecMain
+from object_main import ObjecMain
 
 class Team(ObjecMain):
-    _selector = '#content > div:nth-child(9) > div:nth-child(7) > div:nth-child(1) > table:nth-child(1)'
+    _selectors = [
+        '#content > div:nth-child(9) > div:nth-child(7) > div:nth-child(1) > table:nth-child(1)',
+        '#content > table:nth-child(6)'
+    ]
+    
+    
     def __init__(self, url):
-        super().__init__(url, self._selector)
+        self._soup = None
 
-        self.teams_names = str(self._new_part[0].find_all("tr")[2].text)
+        for selector in self._selectors:
+            
+            super().__init__(url, selector)
+            
+            if self._new_part:
+                self._soup = self._new_part[0]
+                break
+
+        if self._soup is None:
+            raise ValueError("Nenhum dado encontrado com os seletores fornecidos.")
+
+
+        self.teams_names = self._new_part[0].find("h1").text
 
         self._values = self.teams_names.split("vs")
         self._home = self._values[0]
@@ -17,12 +34,12 @@ class Team(ObjecMain):
 
     def get_home(self):
         
-        return self._home
+        return str(self._home).strip()
     
 
     def get_away(self):
 
-        return self._away
+        return str(self._away).strip()
        
       
         

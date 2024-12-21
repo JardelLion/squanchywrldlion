@@ -1,11 +1,24 @@
-from classes.ppg import ObjecMain
+from object_main import ObjecMain
 
 class TeamScoringStast(ObjecMain):
     
-    _selector = '#content > div:nth-child(9) > div:nth-child(7) > div:nth-child(2)'
+    _selectors = ['#content > div:nth-child(9) > div:nth-child(7) > div:nth-child(2)',
+                  '#content > div:nth-child(11) > div:nth-child(7) > div:nth-child(2)'
+
+]
 
     def __init__(self, url,):
-        super().__init__(url, self._selector)
+        self._soup = None
+        for selector in self._selectors:
+            super().__init__(url, selector)
+            if self._new_part:
+                self._soup = self._new_part[0]
+                break
+
+        if self._soup is None:
+            raise ValueError("Nenhum dado encontrado com os seletores fornecidos.")
+
+    
 
 
         self._soup = self._new_part[0].find_all("table")
@@ -117,7 +130,3 @@ class TeamScoringStast(ObjecMain):
 
 
         
-
-
-        
-

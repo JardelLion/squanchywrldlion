@@ -16,10 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import scrape_and_save_view
+# from .views import scrape_and_save_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
-    path('scrape/', scrape_and_save_view, name='scrape_and_save'),
+    
 ]

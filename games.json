@@ -1,0 +1,87 @@
+[
+    {
+        "id": "uiidnumber",
+        "id_game": "game + data",
+        "date": "date.today",
+        "game": "home vs away",
+        "home": "home",
+        "away": "away", 
+        "season": "2024/2025",
+        "league": "laliga",
+        "hour_game": "22:00",
+        "simbol": {
+            "home": "simbol_home",
+            "away": "simbol_away"
+        },
+        "last_game":{
+            "home": "last_game_home",
+            "away": "last_game_away"
+            },
+        "pgg": {
+            "home": "ppg_home",
+            "home_total": "ppg_home_total",
+            "away": "ppg_away",
+            "away_total": "ppg_away_total",
+            "points": {
+                "home": {
+                    "gp": "gp",
+                    "w": "w",
+                    "d": "d",
+                    "l": "l",
+                    "total": {
+                        "gp": "gp",
+                        "w": "w",
+                        "d": "d",
+                        "l": "l"
+                    }
+
+                },
+                "away": {
+                    "gp": "gp",
+                    "w": "w",
+                    "d": "d",
+                    "l": "l",
+                    "total": {
+                        "gp": "gp",
+                        "w": "w",
+                        "d": "d",
+                        "l": "l"
+                    }
+
+                }
+            }
+        },
+        "performance": {
+            "home": {
+                "poins": "points",
+                "goal_scored": "goal_scored",
+                "goal_conceded": "goal_conceded"
+            },
+            "away": {
+                "points": "points",
+                "goal_scored": "goal_scored",
+                "goal_coneceded": "goal_conceded"
+            }
+        },
+        "team_score_stats": {
+            "home": {
+                "score_average": "score_average",
+                "score_rate": "score_rate"
+            },
+            "away": {
+                "score_average": "score_average",
+                "score_rate": "score_rate"
+            },
+            "bts": "bts",
+            "total_over_1_5": "total_over_1_5",
+            "total_over_2_5": "total_over_2_5",
+            "total_over_3_5": "total_over_3_5",
+            "total_average": "total_average"
+        }
+        ,
+        "total_match_goal": {
+            "home": "home",
+            "away": "away"
+        }
+    }
+]

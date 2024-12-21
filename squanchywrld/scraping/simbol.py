@@ -1,4 +1,4 @@
-from classes.team import Team
+from team import Team
 
 
 class Simbol:

@@ -1,4 +1,4 @@
-from scraping.object_main import ObjecMain
+from object_main import ObjecMain
 
 class Performance(ObjecMain):
 
@@ -6,7 +6,8 @@ class Performance(ObjecMain):
     Home vs Away distribution
     """
     _selectors = [
-        '#content > div:nth-child(9) > div:nth-child(7) > div:nth-child(2) > table:nth-child(96)'
+        '#content > div:nth-child(9) > div:nth-child(7) > div:nth-child(2) > table:nth-child(96)',
+        '#content > div:nth-child(11) > div:nth-child(7) > div:nth-child(2) > table:nth-child(96)'
     ]
     # model performance
     
@@ -48,7 +49,7 @@ class Performance(ObjecMain):
 
         td = str(tr.find('td').text).strip()
 
-        return td[-1]
+        return td[:-1]
 
      
     @property
@@ -75,5 +76,8 @@ class Performance(ObjecMain):
 
         return td[:-1]
   
-
+if __name__ == "__main__":
+    url = 'file:///home/jardel-lion-studio/Documents/games/octuber/18/Alaves%20vs%20Valladolid%20H2H%20stats%20preview%20and%20analysis,%202024-2025.html'
         
+    last_resutl = Performance(url)
+    print(last_resutl.get_home_conceded)

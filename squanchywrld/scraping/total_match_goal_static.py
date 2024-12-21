@@ -1,5 +1,5 @@
 
-from classes.ppg import ObjecMain
+from ppg import ObjecMain
 
 class TotalMatchGoalStatic(ObjecMain):
     """
@@ -65,3 +65,13 @@ class TotalMatchGoalStatic(ObjecMain):
         return self._table_row_obj("trow5")
 
     
+
+        
+
+
+if __name__ == '__main__':
+    
+    url = 'file:///home/jardel-lion-studio/Documents/games/octuber/18/Alaves%20vs%20Valladolid%20H2H%20stats%20preview%20and%20analysis,%202024-2025.html'
+        
+    p = TotalMatchGoalStatic(url)
+    print(p.get_away_obj)

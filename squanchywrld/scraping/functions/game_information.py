@@ -1,7 +1,8 @@
-from scraping.object_main import ObjecMain
+from object_main import ObjecMain
 
 class GameInformation(ObjecMain):
-    _selector = '#content > div:nth-child(2)'
+    _selector = '#content > div:nth-child(4)'
+    
    
     def __init__(self,url):
         super().__init__(url, self._selector)
@@ -30,3 +31,6 @@ class GameInformation(ObjecMain):
         
         return text
 
+
+if __name__ == "__main__":
+    f = GameInformation()

@@ -1,4 +1,4 @@
-from scraping.object_main import ObjecMain
+from object_main import ObjecMain
 
 class LastResult(ObjecMain):
 
@@ -13,7 +13,6 @@ class LastResult(ObjecMain):
         for selector in self._selectors:
             
             super().__init__(url, selector)
-            
             if self._new_part:
                 self._soup = self._new_part[0]
                 break
@@ -74,12 +73,16 @@ class LastResult(ObjecMain):
         
         if len(results) > 1:
             for font in results:
+                    
+
                 try:
                     index_by_char = font.find("font").text.find("(")
+                    who_scored = str(font.find("font").text[0:index_by_char]).strip()
+                    
                     data_object['moments'].append(
                         {"time":str(font.find("font").text[index_by_char + 1:-1]).strip(),
                          "goal": str(font.find("b").text).strip(),
-                         "who_scored":str(font.find("font").text[0:index_by_char]).strip()
+                         "who_scored": who_scored
                         }
                     )
                 except :
@@ -94,4 +97,5 @@ class LastResult(ObjecMain):
     @property
     def get_away(self):
         return self._away_data_object
+
 
